@@ -1,0 +1,147 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.eol": "\n",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    //C:\\WINDOWS\\System32\\wsl.exe
+    "C_Cpp.updateChannel": "Insiders",
+    "remote.SSH.remotePlatform": {
+        "raspberrypi.local": "linux",
+        "118.27.32.204": "linux",
+        "rcc.ritsumei.ac.jp": "linux"
+    },
+    "terminal.integrated.shell.linux": "/bin/bash",
+    // /bin/bash
+    "[csharp]": {
+        "editor.defaultFormatter": "Leopotam.csharpfixformat"
+    },
+    "json.schemas": [],
+    "editor.formatOnType": true, /*空白を自動で開けるやつ*/
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4}",
+    "rust-client.engine": "rust-analyzer",
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "runner.languageMap": {
+        "haskell": "%userprofile%/vsc_config/run_hs.bat"
+    },
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=cv2"
+    ],
+    // ---------- Language ----------
+    "[tex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        // スニペット補完中にも補完を使えるようにする
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    "[bibtex]": {
+        // インデント幅を2にする
+        "editor.tabSize": 2
+    },
+    // ---------- LaTeX Workshop ----------
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+    // 生成ファイルを削除するときに対象とするファイル
+    // デフォルト値に "*.synctex.gz" を追加
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav",
+        "*.dvi",
+        "*.synctex.gz"
+    ],
+    // 生成ファイルを "out" ディレクトリに吐き出す
+    //"latex-workshop.latex.outDir": "out",
+    // ビルドのレシピ
+    "extensions.autoUpdate": false, //今回の原因となった自動アプデをしない
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf",
+            "tools": [
+                "ptex2pdf" //タイプセットに使うtoolの名前
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [ //タイプセットに使うtool一覧
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "ptex2pdf", //ptex2pdf自体の設定はこれまでと一緒
+            "command": "ptex2pdf",
+            "args": [
+                "-interaction=nonstopmode",
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "-interaction=nonstopmode",
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Default Dark+",
+    "editor.fontLigatures": null,
+    "git.ignoreLegacyWarning": true,
+    "java.home": "C:\\Program Files\\Java\\jdk-15.0.2",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "terminal.integrated.shellArgs.windows": [
+        "-d",
+        "Ubuntu-20.04 (既定)"
+    ],
+    "latex-workshop.message.update.show": false
+}
